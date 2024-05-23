@@ -1,9 +1,8 @@
-INCLUDE = -Ilib/SDL2/include -IGame/
-LINKERS = -Llib/SDL2/lib
+INCLUDE = -Isrc/game
 LIBS = -lmingw32 -lsdl2main -lsdl2
-DEPS = Game/*.cpp
+DEPS = src/game/*.cpp
 
 all:
 	cls
-	g++ $(INCLUDE) $(LINKERS) $(DEPS) main.cpp -o main $(LIBS)
+	g++ $(INCLUDE) $(LINKERS) $(DEPS) src/main.cpp -o main $(LIBS)
 	./main
